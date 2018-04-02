@@ -45,6 +45,8 @@ if (isWindows) {
   app.setAppUserModelId(appId);
 }
 
+app.disableHardwareAcceleration();
+
 // Force single window
 const isSecondInstance = app.makeSingleInstance((argv) => {
   if (mainWindow) {
