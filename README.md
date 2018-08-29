@@ -1,6 +1,7 @@
 **This repository is only for Franz 5 and later, previous versions are no longer maintained.**
 ---
 
+OK
 <img src="./build-helpers/images/icon.png" alt="" width="150"/>
 
 # Franz 5 (beta)
