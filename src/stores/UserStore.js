@@ -201,8 +201,6 @@ export default class UserStore extends Store {
 
     this.getUserInfoRequest.patch(() => response.data);
     this.actionStatus = response.status || [];
-
-    gaEvent('User', 'update');
   }
 
   @action _resetStatus() {

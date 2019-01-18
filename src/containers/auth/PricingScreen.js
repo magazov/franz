@@ -12,10 +12,6 @@ import { globalError as globalErrorPropType } from '../../prop-types';
 export default @inject('stores', 'actions') @observer class PricingScreen extends Component {
   static propTypes = {
     error: globalErrorPropType.isRequired,
-  };
-
-  componentDidMount() {
-    gaPage('Auth/Pricing');
   }
 
   render() {
