@@ -6,7 +6,6 @@ import { RouterStore } from 'mobx-react-router';
 import Pricing from '../../components/auth/Pricing';
 import UserStore from '../../stores/UserStore';
 import PaymentStore from '../../stores/PaymentStore';
-import { gaPage } from '../../lib/analytics';
 
 import { globalError as globalErrorPropType } from '../../prop-types';
 

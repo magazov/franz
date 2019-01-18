@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { inject, observer } from 'mobx-react';
 import Invite from '../../components/auth/Invite';
-import { gaPage } from '../../lib/analytics';
 
 export default @inject('stores', 'actions') @observer class InviteScreen extends Component {
   componentDidMount() {
-    gaPage('Auth/Invite');
   }
 
   render() {

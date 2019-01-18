@@ -5,11 +5,9 @@ import { inject, observer } from 'mobx-react';
 import Invite from '../../components/auth/Invite';
 import ErrorBoundary from '../../components/util/ErrorBoundary';
 
-import { gaPage } from '../../lib/analytics';
 
 export default @inject('stores', 'actions') @observer class InviteScreen extends Component {
   componentDidMount() {
-    gaPage('Settings/Invite');
   }
 
   componentWillUnmount() {

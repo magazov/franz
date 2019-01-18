@@ -18,7 +18,6 @@ import apiFactory from './api';
 import actions from './actions';
 import MenuFactory from './lib/Menu';
 import TouchBarFactory from './lib/TouchBar';
-import * as analytics from './lib/analytics';
 
 import I18N from './I18n';
 import AppLayoutContainer from './containers/layout/AppLayoutContainer';

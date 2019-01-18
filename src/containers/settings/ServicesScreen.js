@@ -6,14 +6,12 @@ import { RouterStore } from 'mobx-react-router';
 // import RecipePreviewsStore from '../../stores/RecipePreviewsStore';
 import UserStore from '../../stores/UserStore';
 import ServiceStore from '../../stores/ServicesStore';
-import { gaPage } from '../../lib/analytics';
 
 import ServicesDashboard from '../../components/settings/services/ServicesDashboard';
 import ErrorBoundary from '../../components/util/ErrorBoundary';
 
 export default @inject('stores', 'actions') @observer class ServicesScreen extends Component {
   componentDidMount() {
-    gaPage('Settings/Service Dashboard');
   }
 
   componentWillUnmount() {

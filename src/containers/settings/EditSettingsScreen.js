@@ -8,7 +8,6 @@ import SettingsStore from '../../stores/SettingsStore';
 import UserStore from '../../stores/UserStore';
 import Form from '../../lib/Form';
 import { APP_LOCALES, SPELLCHECKER_LOCALES } from '../../i18n/languages';
-import { gaPage } from '../../lib/analytics';
 import { DEFAULT_APP_SETTINGS } from '../../config';
 import { config as spellcheckerConfig } from '../../features/spellchecker';
 
@@ -79,7 +78,6 @@ export default @inject('stores', 'actions') @observer class EditSettingsScreen e
   };
 
   componentDidMount() {
-    gaPage('Settings/App');
   }
 
   onSubmit(settingsData) {
