@@ -60,7 +60,6 @@ window.addEventListener('load', () => {
     api,
     menu,
     touchBar,
-    analytics,
     render() {
       const preparedApp = (
         <Provider stores={stores} actions={actions}>

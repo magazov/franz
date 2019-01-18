@@ -7,7 +7,6 @@ import { isDevMode } from '../environment';
 import Store from './lib/Store';
 import Request from './lib/Request';
 import CachedRequest from './lib/CachedRequest';
-import { gaEvent } from '../lib/analytics';
 
 const debug = require('debug')('Franz:UserStore');
 
@@ -156,8 +155,6 @@ export default class UserStore extends Store {
     this._setUserData(authToken);
 
     this.stores.router.push('/');
-
-    gaEvent('User', 'login');
   }
 
   @action async _signup({
@@ -177,8 +174,6 @@ export default class UserStore extends Store {
     this._setUserData(authToken);
 
     this.stores.router.push(this.PRICING_ROUTE);
-
-    gaEvent('User', 'signup');
   }
 
   @action async _retrievePassword({ email }) {
@@ -186,8 +181,6 @@ export default class UserStore extends Store {
 
     await request._promise;
     this.actionStatus = request.result.status || [];
-
-    gaEvent('User', 'retrievePassword');
   }
 
   @action async _invite({ invites }) {
@@ -201,8 +194,6 @@ export default class UserStore extends Store {
     if (this.stores.router.location.pathname.includes(this.INVITE_ROUTE)) {
       this.stores.router.push('/');
     }
-
-    gaEvent('User', 'inviteUsers');
   }
 
   @action async _update({ userData }) {
